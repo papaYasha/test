@@ -15,6 +15,10 @@
 		FA97D93A27A28E14004782A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA97D93827A28E14004782A4 /* LaunchScreen.storyboard */; };
 		FA97D95127A29856004782A4 /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97D95027A29856004782A4 /* ContentVC.swift */; };
 		FA97D95327A2996B004782A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97D95227A2996B004782A4 /* Constants.swift */; };
+		FA97D95527A2AA9E004782A4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97D95427A2AA9E004782A4 /* TableViewCell.swift */; };
+		FA97D95727A2AE73004782A4 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97D95627A2AE73004782A4 /* ImageData.swift */; };
+		FA97D95927A2AE9D004782A4 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97D95827A2AE9D004782A4 /* ImageManager.swift */; };
+		FA97D95B27A2AEC6004782A4 /* ImageSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97D95A27A2AEC6004782A4 /* ImageSort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		FA97D94B27A292C9004782A4 /* Dongle-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Bold.ttf"; sourceTree = "<group>"; };
 		FA97D95027A29856004782A4 /* ContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
 		FA97D95227A2996B004782A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA97D95427A2AA9E004782A4 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		FA97D95627A2AE73004782A4 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		FA97D95827A2AE9D004782A4 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		FA97D95A27A2AEC6004782A4 /* ImageSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +170,7 @@
 		FA97D94E27A2981E004782A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA97D95427A2AA9E004782A4 /* TableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +178,9 @@
 		FA97D94F27A29826004782A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA97D95627A2AE73004782A4 /* ImageData.swift */,
+				FA97D95827A2AE9D004782A4 /* ImageManager.swift */,
+				FA97D95A27A2AEC6004782A4 /* ImageSort.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,11 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA97D95B27A2AEC6004782A4 /* ImageSort.swift in Sources */,
 				FA97D95327A2996B004782A4 /* Constants.swift in Sources */,
 				FA97D93227A28E11004782A4 /* ShowVC.swift in Sources */,
 				FA97D92E27A28E11004782A4 /* AppDelegate.swift in Sources */,
+				FA97D95927A2AE9D004782A4 /* ImageManager.swift in Sources */,
+				FA97D95527A2AA9E004782A4 /* TableViewCell.swift in Sources */,
 				FA97D95127A29856004782A4 /* ContentVC.swift in Sources */,
 				FA97D93027A28E11004782A4 /* SceneDelegate.swift in Sources */,
+				FA97D95727A2AE73004782A4 /* ImageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +409,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = test/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -411,7 +426,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = test/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
