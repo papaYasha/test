@@ -8,7 +8,8 @@
 import UIKit
 
 protocol ImageManagerDelegate {
-    func didFailWithError(error: Error)
+    func didFailWithError()
+    func showAlert()
 }
 
 struct ImageManager {
@@ -24,6 +25,7 @@ struct ImageManager {
             let session = URLSession.shared
             let task = session.dataTask(with: url) { data, response, error in
                 guard let data = data else {
+                    delegate?.didFailWithError()
                     print(error?.localizedDescription ?? "!error!")
                     return
                 }
@@ -33,7 +35,6 @@ struct ImageManager {
                         handler(mapped)
                     }
                 } catch {
-                    delegate?.didFailWithError(error: error)
                     print(error.localizedDescription)
                 }
             }
@@ -50,7 +51,6 @@ struct ImageManager {
                 }
                 
                 if error != nil {
-                    delegate?.didFailWithError(error: error!)
                     print(error?.localizedDescription ?? "!error_1!")
                     return
                 }
@@ -60,7 +60,6 @@ struct ImageManager {
                         handler(uiImage)
                     }
                 } else {
-                    delegate?.didFailWithError(error: error!)
                     print(error?.localizedDescription ?? "!error_2!")
                 }
             }

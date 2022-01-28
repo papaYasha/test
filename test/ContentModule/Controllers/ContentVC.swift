@@ -34,6 +34,7 @@ class ContentVC: UIViewController {
     //MARK: - Functions
     
     private func config() {
+        createDelegate()
         configTableView()
         loadImagesInfo()
         configInfoView()
@@ -43,6 +44,10 @@ class ContentVC: UIViewController {
     private func configTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func createDelegate() {
+        imageManager.delegate = self
     }
     
     private func configInfoView() {
@@ -91,6 +96,7 @@ extension ContentVC: UITableViewDelegate {
 //MARK: - Extension TableViewDataSource
 
 extension ContentVC: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return hits.count
     }
@@ -115,19 +121,18 @@ extension ContentVC: UITableViewDataSource {
 }
 
 //MARK: - Extension ImageManagerDelegate
+
 extension ContentVC: ImageManagerDelegate {
-    func didFailWithError(error: Error) {
+    
+    func didFailWithError() {
         showAlert()
-        print(error.localizedDescription)
     }
     
     func showAlert() {
-        func showAlert() {
             let alert = UIAlertController(title: "Network Error", message: "The network connection is lost", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                 print("You choose OK")
             }))
             self.present(alert, animated: true)
-        }
     }
 }
