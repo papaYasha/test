@@ -1,7 +1,7 @@
 # Test
 
 
-App get images from open api service and present images on tableView. Also API provide image data, such as: (how much?) -> downloads, views, comments, likes. This info present on custom view, by tapping on selected image. In MVP 
+App get images from open api service and present images on tableView. Also API provide image data, such as: (how much?) -> downloads, views, comments, likes. This info present on custom view, by tapping on selected image.
 
 ![636k28](https://user-images.githubusercontent.com/90447243/151671938-7e6a28ce-93ba-440d-8c2c-51e9d745cf0f.gif)
 
