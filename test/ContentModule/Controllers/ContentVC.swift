@@ -8,7 +8,7 @@
 import UIKit
 
 class ContentVC: UIViewController {
-
+    
     //MARK: - IBOutlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -61,7 +61,7 @@ class ContentVC: UIViewController {
     
     private func loadImagesInfo() {
         imageManager.loadImagesInfo { mapped in
-            self.hits = self.service.sortByLikes(mapped.hits)
+            self.hits = self.service.sortByLikes_Ascending(mapped.hits)
             self.tableView.reloadData()
         }
     }
@@ -130,10 +130,10 @@ extension ContentVC: ImageManagerDelegate {
     }
     
     func showAlert() {
-            let alert = UIAlertController(title: "Network Error", message: "The network connection is lost", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                print("You choose OK")
-            }))
-            self.present(alert, animated: true)
+        let alert = UIAlertController(title: "Network Error", message: "The network connection is lost", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            print("You choose OK")
+        }))
+        self.present(alert, animated: true)
     }
 }
