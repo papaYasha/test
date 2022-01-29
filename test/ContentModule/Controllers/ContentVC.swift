@@ -23,6 +23,7 @@ class ContentVC: UIViewController {
     
     var hits: [ImageItemResponse] = []
     var imageManager = ImageManager()
+    let service = ImageService.shared
     
     //MARK: - ViewDidLoad
     
@@ -60,7 +61,7 @@ class ContentVC: UIViewController {
     
     private func loadImagesInfo() {
         imageManager.loadImagesInfo { mapped in
-            self.hits = mapped.hits
+            self.hits = self.service.sortByLikes(mapped.hits)
             self.tableView.reloadData()
         }
     }

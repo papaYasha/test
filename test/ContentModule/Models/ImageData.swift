@@ -6,12 +6,12 @@
 //
 
 struct ImageData: Codable {
-    let hits: [ImageItemResponse]
+    var hits: [ImageItemResponse]
 }
 
 struct ImageItemResponse: Codable {
-    let webformatURL: String
-    let likes: Int
-    let comments: Int
-    let downloads: Int
+    var webformatURL: String
+    var likes: Int
+    var comments: Int
+    var downloads: Int
 }
