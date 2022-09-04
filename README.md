@@ -1,4 +1,4 @@
-# Test
+# Test task for Opulex
 
 
 App get images from open api service and present images on tableView. Also API provide image data, such as: (how much?) -> downloads, views, comments, likes. This info present on custom view, by tapping on selected image.
